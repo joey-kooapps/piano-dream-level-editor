@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <title>Piano Dream Level Editor</title>
+  </head>
+  <body style="text-align: center; margin: 0; padding: 0;">
+    <div id="unity-container" style="position: absolute; width: 100%; height: 100%">
+      <canvas id="unity-canvas" width=960 height=600 style="width: 100%; height: 100%"></canvas>
+    </div>
+    <script src="Build/220331.loader.js"></script>
+    <script>
+      createUnityInstance(document.querySelector("#unity-canvas"), {
+        dataUrl: "Build/220331.data.unityweb",
+        frameworkUrl: "Build/220331.framework.js.unityweb",
+        codeUrl: "Build/220331.wasm.unityweb",
+        streamingAssetsUrl: "StreamingAssets",
+        companyName: "Kooapps",
+        productName: "Piano Dream Level Editor",
+        productVersion: "1.1.220331",
+        // matchWebGLToCanvasSize: false, // Uncomment this to separately control WebGL canvas render size and DOM element size.
+        // devicePixelRatio: 1, // Uncomment this to override low DPI rendering on high DPI displays.
+      });
+    </script>
+  </body>
+</html>
